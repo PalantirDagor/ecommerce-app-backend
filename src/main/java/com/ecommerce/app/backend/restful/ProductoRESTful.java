@@ -52,13 +52,13 @@ public class ProductoRESTful {
 	
 	@GetMapping (value = "{id}")
 	private ResponseEntity<Optional<Producto>> listarPersonasPorID (@PathVariable ("id") Long id){
-		System.out.println(id);
+		
 		return ResponseEntity.ok(productoService.findById(id));
 	}
 	
 	@PutMapping
 	public void actualizarProducto(@RequestBody Producto producto) {
-		System.out.println(producto.getId());
+		
 		productoService.update(producto);
 	}
 }
