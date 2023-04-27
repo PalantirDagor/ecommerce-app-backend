@@ -11,8 +11,8 @@ import javax.persistence.Table;
 public class Producto {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	
 	private String nombre;
 	private String referencia;
@@ -20,7 +20,11 @@ public class Producto {
 	private String cantidad; 
 	private String urlFoto;
 	
-	public Producto(long id, String nombre, String referencia, String categoria, String cantidad, String urlFoto) {
+	public Producto() {
+		
+	}
+	
+	public Producto(Long id, String nombre, String referencia, String categoria, String cantidad, String urlFoto) {
 		this.id = id;
 		this.nombre = nombre;
 		this.referencia = referencia;
@@ -29,10 +33,10 @@ public class Producto {
 		this.urlFoto = urlFoto;
 	}
 	
-	public long getId() {
+	public Long getId() {
 		return id;
 	}
-	public void setId(long id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 	public String getNombre() {

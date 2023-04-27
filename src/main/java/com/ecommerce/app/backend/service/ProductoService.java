@@ -30,7 +30,7 @@ public class ProductoService {
 	}
 	
 	public Optional<Producto> findById(Long id){
-		
+		System.out.println(id);
 		return productoRepositorio.findById(id);
 	}
 	
